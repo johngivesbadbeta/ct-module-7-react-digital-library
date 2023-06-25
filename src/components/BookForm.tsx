@@ -1,3 +1,4 @@
+import { useSubmit } from "react-router-dom"
 import Button from "./Button"
 import Input from "./Input"
 
@@ -21,11 +22,11 @@ const BookForm = (props:BookFormProps) => {
   const onSubmit = (data: any, event: any) => {
     console.log(`ID: ${typeof props.id}`);
     console.log(props.id)
-    console.log(data);
+    console.log(data)
     if (props.id && props.id.length > 0) {
       server_calls.update(props.id[0], data)
       console.log(`Updated: ${ data.title } ${ props.id }`)
-      setTimeout(() => {window.location.reload()}, 1000);
+      setTimeout(() => {window.location.reload()}, 500);
       event.target.reset()
     } else {
       // use dispatch to update our state in our store
@@ -35,7 +36,7 @@ const BookForm = (props:BookFormProps) => {
       dispatch(chooseDate(data.release_date));
 
       server_calls.create(store.getState())
-      setTimeout(() => {window.location.reload()}, 1000);
+      setTimeout(() => {window.location.reload()}, 500);
       event.target.reset()
 
       props.onClose();

@@ -2,7 +2,7 @@ const token = '32e17f0bb82703a1392fbc78fabae16851f3e523c8216792'
 
 export const server_calls = {
     get: async () => {
-        const response = await fetch('https://digital-library-a0k0.onrender.com/api/books',
+        const response = await fetch(`https://digital-library-a0k0.onrender.com/api/books`,
         {
             method: 'GET',
             headers: {
@@ -20,7 +20,7 @@ export const server_calls = {
     },
 
     create: async (data: any = {}) => {
-        const response = await fetch('https://digital-library-a0k0.onrender.com/api/books',
+        const response = await fetch(`https://digital-library-a0k0.onrender.com/api/books`,
         {
             method: 'POST',
             headers: {

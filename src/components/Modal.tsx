@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Modal = ( props: Props ) => {
-  if ( !props.open ) return (<></>);
+  if ( !props.open ) return <></>;
   return (
     <div 
         onClick={ props.onClose } 

@@ -6,15 +6,15 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetData } from '../custom-hooks/FetchData';
 
 const columns: GridColDef[] = [
-    { field: 'id', headerName: 'ID', width: 90  },
-    { field: 'title', headerName: 'Title', flex: 1 },
-    { field: 'author', headerName: 'Author', flex: 1 },
-    { field: 'format', headerName: 'Format', flex: 1 },
-    { field: 'release_date', headerName: 'Release Date', flex: 1 }
+  { field: 'id', headerName: 'ID', width: 90  },
+  { field: 'title', headerName: 'Title', flex: 1 },
+  { field: 'author', headerName: 'Author', flex: 1 },
+  { field: 'format', headerName: 'Format', flex: 1 },
+  { field: 'release_date', headerName: 'Release Date', flex: 1 }
 ]
 
 const DataTable = () => {
-  const [ open, setOpen ] = useState(false);
+  let [ open, setOpen ] = useState(false);
   const { bookData, getData } = useGetData();
   const [ selectionModel, setSelectionModel ] = useState<string[]>([])
 
@@ -65,7 +65,7 @@ const DataTable = () => {
                 }}
                 slotProps={{
                   pagination: {
-                    rowsPerPageOptions: [5]
+                    rowsPerPageOptions: [6]
                   }
                 }}
                 />
