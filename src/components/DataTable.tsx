@@ -30,7 +30,6 @@ const DataTable = () => {
     server_calls.delete(selectionModel[0]);
     getData();
     console.log(`Selection model: ${selectionModel}`)
-    setTimeout( () => { window.location.reload() }, 500)
   }
 
   return (
@@ -59,14 +58,10 @@ const DataTable = () => {
                 <DataGrid
                   rows={bookData}
                   columns={columns}
+                  rowsPerPageOptions={[100]}
                   checkboxSelection={true} 
-                  onRowSelectionModelChange={ (item:any) => {
+                  onSelectionModelChange={ (item:any) => {
                     setSelectionModel(item)
-                }}
-                slotProps={{
-                  pagination: {
-                    rowsPerPageOptions: [6]
-                  }
                 }}
                 />
         </div>
