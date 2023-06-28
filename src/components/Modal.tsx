@@ -15,7 +15,7 @@ const Modal = ( props: Props ) => {
         justify-center align-middle bg-gray-300 bg-opacity-25'
     >
         <div
-            className='max-w-600px w-2/5 fixed flex z-1 mt-20 bg-white shadow-xl'
+            className='max-w-300px w-2/5 fixed flex z-1 mt-5 bg-white shadow-xl'
             onClick={(e) => {
                 e.stopPropagation()
             }}
@@ -27,7 +27,7 @@ const Modal = ( props: Props ) => {
                         x
                     </p>
                 </div>
-                <div className='flex flex-col items-center text-center mt-3 p-2'>
+                <div className='flex flex-col items-center text-center p-2'>
                     <BookForm id={ props.id } onClose={props.onClose}/>
                 </div>
             </div>

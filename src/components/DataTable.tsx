@@ -10,7 +10,10 @@ const columns: GridColDef[] = [
   { field: 'title', headerName: 'Title', flex: 1 },
   { field: 'author', headerName: 'Author', flex: 1 },
   { field: 'format', headerName: 'Format', flex: 1 },
-  { field: 'release_date', headerName: 'Release Date', flex: 1 }
+  { field: 'release_date', headerName: 'Release Date', flex: 1 },
+  { field: 'edition', headerName: 'Edition', flex: 1 },
+  { field: 'print_length', headerName: 'Print Length', flex: 1 },
+  { field: 'isbn', headerName: 'ISBN', flex: 1 }
 ]
 
 const DataTable = () => {
@@ -39,7 +42,7 @@ const DataTable = () => {
             open={open}
             onClose={handleClose}
         />
-        <div className='flex flex-row'>
+        <div className='ml-7 flex flex-row'>
             <div>
                 <button
                     className='p-3 m-3 bg-slate-300 rounded hover:bg-slate-800 hover:text-white'
@@ -58,11 +61,19 @@ const DataTable = () => {
                 <DataGrid
                   rows={bookData}
                   columns={columns}
-                  rowsPerPageOptions={[100]}
+                  rowsPerPageOptions={[25]}
                   checkboxSelection={true} 
                   onSelectionModelChange={ (item:any) => {
                     setSelectionModel(item)
                 }}
+                  // Hiding ID column
+                  initialState={{
+                    columns: {
+                      columnVisibilityModel: {
+                        id: false
+                      }
+                    }
+                  }}
                 />
         </div>
     </>

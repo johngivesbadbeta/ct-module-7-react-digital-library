@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <nav className='flex items-center justify-between flex-wrap bg-yellow-500 p-6'>
-        <div className='flex items-center flex-shrink-0 text-white mr-6'>
+        <div className='flex items-center flex-shrink-0 text-white m-4'>
             <Link to='/' className='font-semibold text-xl tracking-tight'>Digital Library</Link>
         </div>
         <div className='block'>
@@ -40,7 +40,7 @@ function Navbar() {
         { isVisible ? ( 
             <div className='w-full block flex-grow items-center'>
                 <div className='text-sm lg:flex-grow'>
-                    <Button className='p-3 m-5 bg-yellow-400 justify-center'>
+                    <Button className='p-3 m-5 rounded bg-yellow-400 justify-center'>
                         <div>
                             <Link to='/' onClick={ clicked } className='flex place-items-center mt-4 lg:inline-block lg:mt-0
                             text-yellow-200 hover:text-white mr-4'>
@@ -48,7 +48,7 @@ function Navbar() {
                             </Link>
                         </div>
                     </Button>
-                    <Button className='p-3 m-5 bg-yellow-400 justify-center'>
+                    <Button className='p-3 m-5 rounded bg-yellow-400 justify-center'>
                         <div>
                             <Link to='/about' onClick={ clicked } className='flex place-items-center mt-4 lg:inline-block lg:mt-0
                             text-yellow-200 hover:text-white mr-4'>
@@ -56,7 +56,7 @@ function Navbar() {
                             </Link>
                         </div>
                     </Button>
-                    <Button className='p-3 m-5 bg-yellow-400 justify-center'>
+                    <Button className='p-3 m-5 rounded bg-yellow-400 justify-center'>
                         <div>
                             <Link to='/contact' onClick={ clicked } className='flex place-items-center mt-4 lg:inline-block lg:mt-0
                             text-yellow-200 hover:text-white mr-4'>
@@ -64,7 +64,7 @@ function Navbar() {
                             </Link>
                         </div>
                     </Button>
-                    <Button className='p-3 m-5 bg-yellow-400 justify-center'>
+                    <Button className='p-3 m-5 rounded bg-yellow-400 justify-center'>
                         <div>
                             <Link to='/dashboard' onClick={ clicked } className='flex place-items-center mt-4 lg:inline-block lg:mt-0
                             text-yellow-200 hover:text-white mr-4'>
@@ -75,7 +75,7 @@ function Navbar() {
                     {
                         !isAuthenticated ?
 
-                        <Button className='p-3 m-5 bg-yellow-400 justify-center'>
+                        <Button className='p-3 m-5 rounded bg-yellow-400 justify-center'>
                             <div>
                                 <Link to='/' onClick={signInOnClick} className='flex place-items-center mt-4
                                 lg:inline-block lg:mt-0 text-yellow-200 hover:text-white'>
@@ -84,7 +84,7 @@ function Navbar() {
                             </div>
                         </Button>
                         :
-                        <Button className='p-3 m-5 bg-yellow-400 justify-center'>
+                        <Button className='p-3 m-5 rounded bg-yellow-400 justify-center'>
                             <div>
                                 <Link to='/' onClick={signOutOnClick} className='flex place-items-center mt-4
                                 lg:inline-block lg:mt-0 text-yellow-200 hover:text-white'>
