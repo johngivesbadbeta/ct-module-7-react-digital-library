@@ -48,7 +48,7 @@ const DataTable = () => {
                     className='p-3 m-3 bg-slate-300 rounded hover:bg-slate-800 hover:text-white'
                     onClick={() => handleOpen()}
                 >
-                    New Contact
+                    New Book
                 </button>
             </div>
             <Button onClick={handleOpen} className='p-3 m-3 rounded bg-slate-300 hover:bg-slate-800 hover:text-white' >Update</Button>
@@ -57,7 +57,7 @@ const DataTable = () => {
         <div className={ open ? 'hidden' : 'container mx-10 my-5 flex flex-col'}
             style={{ height: 400, width: '100%' }}
             >
-                <h2 className='p-3 bg-slate-300 my-2 rounded'> My Contact</h2>
+                <h2 className='p-3 bg-slate-300 my-2 rounded'> My Books</h2>
                 <DataGrid
                   rows={bookData}
                   columns={columns}
